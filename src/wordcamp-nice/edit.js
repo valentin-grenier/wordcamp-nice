@@ -10,6 +10,7 @@ import {
 import { useState, useEffect } from "@wordpress/element";
 
 import "./editor.scss";
+import "./style.scss";
 
 export default function Edit(props) {
 	// On récupère les propriétés du bloc et la fonction pour mettre à jour les attributs
@@ -142,54 +143,41 @@ export default function Edit(props) {
 
 			{/* Quatrième cas : les données ont été récupérées avec succès */}
 			{!loading && !error && repos.length > 0 && (
-				<div className="wp-block-wcnice-repos__list">
-					<h3>
-						{__("Dépôts de", "wordcamp-nice")} {user}
-					</h3>
+				<div className="wp-block-wcnice-repos">
 					{repos.map((repo) => (
-						<div key={repo.id} className="wp-block-wcnice-repos__item">
-							<div className="wp-block-wcnice-repos__header">
+						<div key={repo.id} className="wp-block-wcnice-repo">
+							<h3 className="wp-block-wcnice-repo__name">
 								<a
 									href={repo.html_url}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="wp-block-wcnice-repos__title"
 								>
 									{repo.name}
 								</a>
-								{repo.private && (
-									<span className="wp-block-wcnice-repos__badge">
-										{__("Privé", "wordcamp-nice")}
-									</span>
-								)}
-							</div>
+							</h3>
 
-							{repo.description && (
-								<p className="wp-block-wcnice-repos__description">
-									{repo.description}
-								</p>
-							)}
+							<p className="wp-block-wcnice-repo__description">
+								{repo.description
+									? repo.description.length > 100
+										? repo.description.substring(0, 100) + "..."
+										: repo.description
+									: ""}
+							</p>
 
-							<div className="wp-block-wcnice-repos__meta">
+							<div className="wp-block-wcnice-repo__bottom">
 								{repo.language && (
-									<span className="wp-block-wcnice-repos__language">
-										🔵 {repo.language}
+									<span className="wp-block-wcnice-repo__language">
+										{repo.language}
 									</span>
 								)}
-								{repo.stargazers_count > 0 && (
-									<span className="wp-block-wcnice-repos__stars">
-										⭐ {repo.stargazers_count}
-									</span>
-								)}
-								{repo.forks_count > 0 && (
-									<span className="wp-block-wcnice-repos__forks">
-										🔱 {repo.forks_count}
-									</span>
-								)}
-								<span className="wp-block-wcnice-repos__updated">
+
+								<time
+									className="wp-block-wcnice-repo__update-date"
+									dateTime={repo.updated_at}
+								>
 									{__("Mis à jour le", "wordcamp-nice")}{" "}
 									{new Date(repo.updated_at).toLocaleDateString("fr-FR")}
-								</span>
+								</time>
 							</div>
 						</div>
 					))}

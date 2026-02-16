@@ -31,8 +31,14 @@
   color: #333;
   margin-bottom: 0.75rem;
 }
-.wp-block-wcnice-repo__update-date {
-  font-size: 0.875rem;
+.wp-block-wcnice-repo__bottom {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.wp-block-wcnice-repo__update-date, .wp-block-wcnice-repo__language {
+  font-size: 0.75rem;
   color: #666;
   background: #e0e0e0;
   padding: 0.5rem 0.75rem;

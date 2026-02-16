@@ -70,14 +70,22 @@ $wrapper_attributes = get_block_wrapper_attributes();
 					<?php echo esc_html(mb_substr($repo['description'] ?? '', 0, 100) . (mb_strlen($repo['description'] ?? '') > 100 ? '...' : '')); ?>
 				</p>
 
-				<time class="wp-block-wcnice-repo__update-date" datetime="<?php echo esc_attr($repo['updated_at']); ?>">
-					<?php
-					echo esc_html(sprintf(
-						__('Mis à jour le %s', 'wordcamp-nice'),
-						date_i18n(get_option('date_format'), strtotime($repo['updated_at']))
-					));
-					?>
-				</time>
+				<div class="wp-block-wcnice-repo__bottom">
+					<?php if (!empty($repo['language'])) : ?>
+						<span class="wp-block-wcnice-repo__language">
+							<?php echo esc_html($repo['language']); ?>
+						</span>
+					<?php endif; ?>
+
+					<time class="wp-block-wcnice-repo__update-date" datetime="<?php echo esc_attr($repo['updated_at']); ?>">
+						<?php
+						echo esc_html(sprintf(
+							__('Mis à jour le %s', 'wordcamp-nice'),
+							date_i18n(get_option('date_format'), strtotime($repo['updated_at']))
+						));
+						?>
+					</time>
+				</div>
 			</div>
 		<?php endforeach; ?>
 	<?php elseif ($status_code === 404) : ?>
