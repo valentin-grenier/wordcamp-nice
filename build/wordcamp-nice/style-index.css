@@ -1,0 +1,45 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/wordcamp-nice/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-wcnice-repos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+.wp-block-wcnice-repo {
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #ddd;
+}
+.wp-block-wcnice-repo__name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.wp-block-wcnice-repo__description {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+.wp-block-wcnice-repo__update-date {
+  font-size: 0.875rem;
+  color: #666;
+  background: #e0e0e0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 99px;
+  margin-top: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
