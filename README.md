@@ -22,7 +22,7 @@ Branche complète avec l'implémentation finale du bloc. Utilisez cette branche 
 - Comprendre la structure finale du projet
 - Avoir une référence pour l'atelier
 
-### `workshop`
+### `atelier`
 
 Branche de démarrage pour l'atelier. Contient uniquement :
 
@@ -48,10 +48,10 @@ git clone [URL_DU_DEPOT] wordcamp-nice
 cd wordcamp-nice
 ```
 
-2/ Pour l'atelier, basculez sur la branche `workshop` :
+2/ Pour l'atelier, basculez sur la branche `atelier` :
 
 ```bash
-git checkout workshop
+git checkout atelier
 ```
 
 3/ Installez les dépendances :
@@ -60,6 +60,8 @@ git checkout workshop
 npm install
 composer install
 ```
+
+Si vous utilisez Local by Flywheel, il faut lancer `npm install` dans un terminal indépendant, pas dans le terminal proposé par Local.
 
 4/ Compilez les assets :
 
