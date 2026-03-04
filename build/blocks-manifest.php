@@ -14,22 +14,7 @@ return array(
 			
 		),
 		'attributes' => array(
-			'user' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'sort' => array(
-				'type' => 'string',
-				'default' => 'updated'
-			),
-			'perPage' => array(
-				'type' => 'number',
-				'default' => 10
-			),
-			'token' => array(
-				'type' => 'string',
-				'default' => ''
-			)
+			
 		),
 		'supports' => array(
 			'html' => false,

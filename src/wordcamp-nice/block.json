@@ -8,24 +8,7 @@
 	"icon": "smiley",
 	"description": "Un bloc pour afficher les dépôts GitHub d'un utilisateur, récupérés via l'API publique de GitHub.",
 	"example": {},
-	"attributes": {
-		"user": {
-			"type": "string",
-			"default": ""
-		},
-		"sort": {
-			"type": "string",
-			"default": "updated"
-		},
-		"perPage": {
-			"type": "number",
-			"default": 10
-		},
-		"token": {
-			"type": "string",
-			"default": ""
-		}
-	},
+	"attributes": {},
 	"supports": {
 		"html": false,
 		"align": true
