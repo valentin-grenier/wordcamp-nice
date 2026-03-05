@@ -91,6 +91,8 @@ $wrapper_attributes = get_block_wrapper_attributes();
 					dateTime="YYYY-MM-DDTHH:mm:ssZ">
 					05/03/2026
 				</time>
+
+				<span class="wp-block-wcnice-repo__language">PHP</span>
 			</div>
 		</div>
 	</div>
