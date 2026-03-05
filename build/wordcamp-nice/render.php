@@ -53,28 +53,45 @@ $wrapper_attributes = get_block_wrapper_attributes();
 ?>
 
 <div <?php echo $wrapper_attributes; ?>>
-	<div class="wp-block-wcnice-repo">
-		<h3 class="wp-block-wcnice-repo__name">
-			<a href="" target="_blank" rel="noopener noreferrer"></a>
-		</h3>
+	<div class="wp-block-wcnice-repos__list">
+		<div class="wp-block-wcnice-repo">
+			<h3 class="wp-block-wcnice-repo__name">
+				<a href="#" target="_blank" rel="noopener noreferrer">
+					Nom du dépôt
+				</a>
+			</h3>
 
-		<p class="wp-block-wcnice-repo__description"></p>
+			<p class="wp-block-wcnice-repo__description">
+				Description du dépôt
+			</p>
 
-		<div class="wp-block-wcnice-repo__bottom">
-			<span class="wp-block-wcnice-repo__language"></span>
-			<time class="wp-block-wcnice-repo__update-date" datetime=""></time>
+			<div class="wp-block-wcnice-repo__bottom">
+				<time
+					class="wp-block-wcnice-repo__update-date"
+					dateTime="YYYY-MM-DDTHH:mm:ssZ">
+					05/03/2026
+				</time>
+			</div>
 		</div>
-	</div>
 
-	<div class="wp-block-wcnice-repos__error">
-		<p><?php echo esc_html__('Utilisateur GitHub non trouvé.', 'wordcamp-nice'); ?></p>
-	</div>
+		<div class="wp-block-wcnice-repo">
+			<h3 class="wp-block-wcnice-repo__name">
+				<a href="#" target="_blank" rel="noopener noreferrer">
+					Nom du dépôt
+				</a>
+			</h3>
 
-	<div class="wp-block-wcnice-repos__error">
-		<p><?php echo esc_html__('Limite de requêtes atteinte. Essayez à nouveau plus tard ou utilisez un token GitHub.', 'wordcamp-nice'); ?></p>
-	</div>
+			<p class="wp-block-wcnice-repo__description">
+				Description du dépôt
+			</p>
 
-	<div class="wp-block-wcnice-repos__error">
-		<p><?php echo esc_html__('Erreur inconnue lors de la récupération des dépôts.', 'wordcamp-nice'); ?></p>
+			<div class="wp-block-wcnice-repo__bottom">
+				<time
+					class="wp-block-wcnice-repo__update-date"
+					dateTime="YYYY-MM-DDTHH:mm:ssZ">
+					05/03/2026
+				</time>
+			</div>
+		</div>
 	</div>
 </div>

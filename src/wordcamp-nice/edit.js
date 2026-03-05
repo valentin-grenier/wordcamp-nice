@@ -33,6 +33,29 @@ export default function Edit(props) {
 			<div className="wp-block-wcnice-repos__error">
 				<p>{__("Le rendu du bloc côté éditeur", "wordcamp-nice")}</p>
 			</div>
+
+			<div className="wp-block-wcnice-repos__list">
+				<div key="" className="wp-block-wcnice-repo">
+					<h3 className="wp-block-wcnice-repo__name">
+						<a href="#" target="_blank" rel="noopener noreferrer">
+							Nom du dépôt
+						</a>
+					</h3>
+
+					<p className="wp-block-wcnice-repo__description">
+						Description du dépôt
+					</p>
+
+					<div className="wp-block-wcnice-repo__bottom">
+						<time
+							className="wp-block-wcnice-repo__update-date"
+							dateTime="YYYY-MM-DDTHH:mm:ssZ"
+						>
+							05/03/2026
+						</time>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }
