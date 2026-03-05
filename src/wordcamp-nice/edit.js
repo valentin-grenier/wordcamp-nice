@@ -111,10 +111,14 @@ export default function Edit(props) {
 						type="password"
 						value={token}
 						onChange={(value) => setAttributes({ token: value })}
-						help={__(
-							"Pour augmenter la limite de 60 à 5000 requêtes/heure",
-							"wordcamp-nice",
-						)}
+						help={
+							<>
+								{__("Pour augmenter la limite de 60 à 5000 requêtes/heure. ", "wordcamp-nice")}
+								<a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer">
+									{__("Générez un token en cliquant ici.", "wordcamp-nice")}
+								</a>
+							</>
+						}
 					/>
 				</PanelBody>
 			</InspectorControls>
