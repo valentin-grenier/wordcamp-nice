@@ -11,7 +11,7 @@
 	"attributes": {
 		"user": {
 			"type": "string",
-			"default": ""
+			"default": "valentin-grenier"
 		},
 		"sort": {
 			"type": "string",
